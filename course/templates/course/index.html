@@ -1,0 +1,44 @@
+{% for i in data%}
+{{ i }}<br />
+{% endfor %}
+{% for i in data2%}
+{{ i }}<br />
+{% endfor %}
+{% comment %}
+    {% url 'detail' 2003 %}
+fdsfsdfsfdsfs
+{% endcomment %}
+
+{% load humanize %}
+{{ 45000|intcomma }}
+<br \>
+{% lorem %}<br \>
+{% lorem 2 p %}<br \>
+{% lorem 2 w random %}
+<br \>
+{% now "JS F Y H:i s" %}
+<br \>
+
+{% spaceless %}
+    <strong>     
+        hhhhhfdsfdsHss   
+    </strong>
+{% endspaceless %}
+{% spaceless %}
+<a href="">
+    <strong>     
+        hhhhhfdsfdsHss   
+    </strong>
+</a>
+{% endspaceless %}
+<br />
+{% templatetag openblock %} url 'index' var1 {% templatetag closeblock %}
+<br />
+{% url 'index2' 2000 as the_urls %}
+<a href="{{ the_urls }}"> ssss  {{ the_urls }}</a>
+<br \><ul>{{ data11 | center:"300" }}</ul>
+<br \><ul>{{ data11 | cut:"0" }}</ul>
+{{ data3 | linebreaks }}
+{{ data3 | linebreaksbr }}
+{{ data4 | phone2numeric }}
+{{ data5 | yesno:"yes,no,none" }}
